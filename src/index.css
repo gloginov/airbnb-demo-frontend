@@ -1,5 +1,25 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@font-face {
+  font-family: "Circular";
+  font-weight: 400;
+  src: url("./fonts/Circular/Circular_Air-Book.woff") format("woff"),
+  url("./fonts/Circular/Circular_Air-Book.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Circular";
+  font-weight: 700;
+  src: url("./fonts/Circular/Circular_Air-Bold.woff") format("woff"),
+  url("./fonts/Circular/Circular_Air-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Circular";
+  font-weight: 300;
+  src: url("./fonts/Circular/Circular_Air-Light.woff") format("woff"),
+  url("./fonts/Circular/Circular_Air-Light.ttf") format("truetype");
+}
+
+body {
+  font-family: "Circular", "sans-serif";
+}
+
