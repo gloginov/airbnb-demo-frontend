@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { SectionBase, CardBase, H1, Img, Cards, Info, Scroll } from "../styled";
-import "flexboxgrid2";
 import capeTown from "./capeTown.png";
 import losAngeles from "./losAngeles.png";
 import miami from "./miami.png";

@@ -19,7 +19,6 @@ import {
   SectionHead,
   Scroll
 } from "../styled";
-import "flexboxgrid2";
 
 const Experiences = SectionBase.extend`
   flex-direction: column;
@@ -30,7 +29,9 @@ const Card = CardBase.extend.attrs({
   className: "col-xs-6 col-md-4 col-xl-3"
 })``;
 
-const Span = styled.span`font-weight: 300;`;
+const Span = styled.span`
+  font-weight: 300;
+`;
 
 const SecCard = props => (
   <Card>

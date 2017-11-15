@@ -4,9 +4,10 @@ import homes from "./homes.png";
 import experiences from "./experiences.png";
 import restaraunts from "./restaraunts.png";
 import { SectionBase, H1, Cards, CardBase, mediaMin } from "../styled";
-import "flexboxgrid2";
 
-const Explore = SectionBase.extend`flex-direction: column;`;
+const Explore = SectionBase.extend`
+  flex-direction: column;
+`;
 
 const Card = CardBase.extend.attrs({
   className: "col-xs-5 col-lg-4"
@@ -45,7 +46,7 @@ export default () => {
     <Explore>
       <H1>Explore Airbnb</H1>
       <Cards>
-        <SecCard src={homes} name="Homes" />
+        <SecCard src={homes} name="Homes" href="/Homes" />
         <SecCard src={experiences} name="Experiences" />
         <SecCard src={restaraunts} name="Restaraunts" />
       </Cards>

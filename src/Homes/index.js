@@ -16,7 +16,6 @@ import {
   SectionHead,
   Scroll
 } from "../styled";
-import "flexboxgrid2";
 import home01 from "./home-1.png";
 import home02 from "./home-2.png";
 import home03 from "./home-3.png";

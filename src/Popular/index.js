@@ -11,7 +11,6 @@ import {
   SectionHead,
   Scroll
 } from "../styled";
-import "flexboxgrid2";
 import chumley from "./chumley.png";
 import hanjan from "./hanjan.png";
 import primeMeats from "./primeMeats.png";
@@ -37,7 +36,9 @@ const Name = styled.p`
   line-height: 21px;
   font-weight: 700;
 `;
-const Pricing = Name.extend`font-weight: 300;`;
+const Pricing = Name.extend`
+  font-weight: 300;
+`;
 
 const SecCard = props => (
   <Card>

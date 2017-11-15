@@ -5,7 +5,6 @@ import logo from "./logo.svg";
 import fb from "./facebook.svg";
 import twitter from "./twitter.svg";
 import ig from "./instagram.svg";
-import "flexboxgrid2";
 
 const Footer = SectionBase.withComponent("footer").extend`
   flex-direction: column;
@@ -14,7 +13,9 @@ const Footer = SectionBase.withComponent("footer").extend`
   padding: 16px 24px;
 `;
 
-const Top = Cards.extend`padding-top: 48px;`;
+const Top = Cards.extend`
+  padding-top: 48px;
+`;
 
 const Nav = styled.nav.attrs({
   className: "col-md-3"
@@ -46,7 +47,9 @@ const Link = Text.withComponent("a").extend`
   color: rgba(99, 99, 99, 1);
 `;
 
-const BottomLink = Link.extend`padding-left: 16px;`;
+const BottomLink = Link.extend`
+  padding-left: 16px;
+`;
 
 const Form = styled.form.attrs({
   className: "col-xs-12 col-md-3"
@@ -75,7 +78,9 @@ const Copyright = styled.div`
   box-sizing: border-box;
 `;
 
-const Social = styled.img`padding-left: 12px;`;
+const Social = styled.img`
+  padding-left: 12px;
+`;
 
 const Links = Copyright.extend`
   margin-right: auto;

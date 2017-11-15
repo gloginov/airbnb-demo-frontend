@@ -55,9 +55,13 @@ export const CardBase = styled.a.attrs({
   padding-right: 8px;
 `;
 
-export const H1 = styled.h1`line-height: 34px;`;
+export const H1 = styled.h1`
+  line-height: 34px;
+`;
 
-export const Img = styled.img`width: 100%;`;
+export const Img = styled.img`
+  width: 100%;
+`;
 
 export const Cards = styled.div.attrs({
   className: "row"
@@ -77,9 +81,7 @@ export const Rating = styled.div`
 export const Arrow = styled.img.attrs({
   src: arrow,
   alt: "arrow"
-})`
-
-`;
+})``;
 
 export const ScrollArrow = styled.img.attrs({
   src: scroll,
@@ -111,7 +113,9 @@ export const Info = styled.p`
   font-size: 15px;
 `;
 
-export const Description = Info.extend`font-weight: 300;`;
+export const Description = Info.extend`
+  font-weight: 300;
+`;
 
 export const RatingInfo = styled.span`
   line-height: 14px;
@@ -155,15 +159,14 @@ export const Link = styled.a`
   margin-left: 5px;
 `;
 
-
 export const Nav = styled.nav.attrs({
-    className: "hidden-xs hidden-sm hidden-md end-lg end-xl"
+  className: "hidden-xs hidden-sm hidden-md end-lg end-xl"
 })`
-    flex: auto
-`; 
+  flex: auto;
+`;
 
 export const Logo = styled.img.attrs({
-    className: "col-xs-2 col-sm-2 col-md-1 col-lg-1 col-xl-1"
+  className: "col-xs-2 col-sm-2 col-md-1 col-lg-1 col-xl-1"
 })`
   position: absolute;
 `;
@@ -176,10 +179,7 @@ export const Icon = styled.img`
   transform: translateY(-50%);
 `;
 
-
-export const Input = styled.input.attrs({
-    
-})`
+export const Input = styled.input.attrs({})`
   padding: 12px 12px 12px 50px;
   width: 100%;
   font-family: "Circular Air Regular", "Arial", "Helvetica", sans-serif;
@@ -190,16 +190,15 @@ export const Input = styled.input.attrs({
 `;
 
 export const SeachInput = styled.div.attrs({
-    className:"col-xs-10 col-sm-10 col-md-7 col-lg-5 col-xl-5"
+  className: "col-xs-10 col-sm-10 col-md-7 col-lg-5 col-xl-5"
 })`
-    padding: 12px 12px 12px 50px;
+  padding: 12px 12px 12px 50px;
 `;
-
 
 export const Header = styled.header`
   padding: 16px 0;
   font-family: "Circular Air Regular", "Arial", "Helvetica", sans-serif;
   color: #383838;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
 `;
