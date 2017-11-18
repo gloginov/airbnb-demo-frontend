@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-addons-shallow-compare": "^0.14.20",
     "flexboxgrid2": "^7.0.0-alpha12",
+    "google-map-react": "^0.25.0",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^15.1.0",
     "react-dom": "^16.0.0",
+    "react-google-map": "^3.1.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "react-with-direction": "^1.1.0",
     "styled-components": "^2.2.3"
   },
   "scripts": {

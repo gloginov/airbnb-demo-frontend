@@ -1,30 +1,45 @@
 import React from "react";
 import "../fonts/fonts.css";
 import logo from "./logo.svg";
-import shape from "../Shape.png";
+import shape from "../images/Shape.png";
 import styled from "styled-components";
-import { mediaMin } from "../styled";
-import arrowDown from "../arrowDown.svg";
+import { mediaMin, SectionBase } from "../styled";
+import arrowDown from "../images/arrowDown.svg";
+import { Link } from "react-router-dom";
 
-const Header = styled.header.attrs({
-  className: "container"
+const HeaderWrap = styled.header.attrs({
 })`
   box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
+  background-color: white;
+  z-index: 150;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
+
+const Header = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 16px 8px;
-  font-family: "Circular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
+`;
+
+const LogoLink = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-item: stretch;
 `;
 
 const Logo = styled.img`
   width: 30px;
   height: 32px;
+  display: inline-block;
 `;
 
 const Input = styled.input.attrs({
-  className: "col-xs-10 col-md-7 col-xl-5"
+  
 })`
   background: url(${shape}) no-repeat 16px center;
   border-radius: 4px;
@@ -33,7 +48,8 @@ const Input = styled.input.attrs({
   box-sizing: border-box;
   font-size: 16px;
   line-height: 24px;
-  margin-left: 20px;
+  width: 100%;
+  height: 100%;
   height: 48px;
   font-family: inherit;
   ::placeholder {
@@ -41,7 +57,7 @@ const Input = styled.input.attrs({
   }
 `;
 
-const Link = styled.a`
+const LinkHeader = styled.a`
   font-size: 14px;
   line-height: 24px;
   text-decoration: none;
@@ -61,24 +77,36 @@ const NavImg = styled.img.attrs({
   src: arrowDown,
   alt: "Navigation"
 })`
-  display: flex;
+  display: inline-block;
   padding-left: 8px;
-  ${mediaMin.lg`display:none;`};
+  position: relative;
+  top: -8px;
 `;
 
 export default () => {
   return (
-    <Header>
-      <Logo src={logo} alt="Airbnb logo" />
-      <NavImg />
-      <Input type="text" placeholder="Try &quot;Miami&quot;" />
-
-      <Nav>
-        <Link href="/become-a-host">Become a host</Link>
-        <Link href="/help">Help</Link>
-        <Link href="/sign-up">Sign Up</Link>
-        <Link href="/log-in">Log In</Link>
-      </Nav>
-    </Header>
+    <HeaderWrap>
+      <div className="container">
+        <Header>
+          <LogoLink>
+            <Link to="/" >
+              <Logo src={logo} alt="Airbnb logo" />
+              <NavImg />
+            </Link>
+          </LogoLink>
+            
+          <div className="col-xs-10 col-md-7 col-xl-5">
+            <Input type="text" placeholder="Try &quot;Miami&quot;" />
+          </div>
+          
+          <Nav>
+            <LinkHeader href="/become-a-host">Become a host</LinkHeader>
+            <LinkHeader href="/help">Help</LinkHeader>
+            <LinkHeader href="/sign-up">Sign Up</LinkHeader>
+            <LinkHeader href="/log-in">Log In</LinkHeader>
+          </Nav>
+        </Header>
+      </div>
+    </HeaderWrap>
   );
 };

@@ -1,9 +1,9 @@
-import "./fonts/fonts.css";
+import "../fonts/fonts.css";
 import styled, { css } from "styled-components";
-import arrow from "./images/arrow.svg";
-import scroll from "./images/scroll.svg";
-import arrowDown from "./images/arrowDown.svg";
-import searchIcon from "./images/Shape.png";
+import arrow from "../images/arrow.svg";
+import scroll from "../images/scroll.svg";
+import arrowDown from "../images/arrowDown.svg";
+import searchIcon from "../images/Shape.png";
 import "flexboxgrid2";
 
 export const sizes = {
@@ -150,7 +150,7 @@ export const Dropdown = styled.select`
   font-weight: 300;
 `;
 
-export const Link = styled.a`
+export const LinkD = styled.a`
   font-size: 14px;
   color: #383838;
   text-decoration: none;
