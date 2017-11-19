@@ -3,15 +3,11 @@ import styled from "styled-components";
 import homes from "./homes.png";
 import experiences from "./experiences.png";
 import restaraunts from "./restaraunts.png";
-import { SectionBase, H1, Cards, CardBase, mediaMin } from "../styled";
+import { H1, Cards, CardBase, mediaMin } from "../styled";
+import { Link } from "react-router-dom";
+import link from "../index.css";
 
-const Explore = SectionBase.extend`
-  flex-direction: column;
-`;
-
-const Card = CardBase.extend.attrs({
-  className: "col-xs-5 col-lg-4"
-})`
+const Card = CardBase.extend.attrs({})`
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
@@ -35,21 +31,25 @@ const CardText = styled.p`
 `;
 
 const SecCard = props => (
-  <Card>
-    <Img src={props.src} alt={props.name} />
-    <CardText>{props.name}</CardText>
-  </Card>
+  <div className="col-xs-6 col-md-5 col-lg-4">
+    <Link to={props.to} className="link">
+      <Card href={props.url}>
+        <Img src={props.src} alt={props.name} />
+        <CardText>{props.name}</CardText>
+      </Card>
+    </Link>  
+  </div>
 );
 
 export default () => {
   return (
-    <Explore>
+    <div className="container">
       <H1>Explore Airbnb</H1>
       <Cards>
-        <SecCard src={homes} name="Homes" href="/Homes" />
-        <SecCard src={experiences} name="Experiences" />
-        <SecCard src={restaraunts} name="Restaraunts" />
+        <SecCard src={homes} name="Homes" to="/homes" />
+        <SecCard src={experiences} name="Experiences" to="/experiences" />
+        <SecCard src={restaraunts} name="Restaraunts" to="/restaraunts" />
       </Cards>
-    </Explore>
+    </div>
   );
 };

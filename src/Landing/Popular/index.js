@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   SectionBase,
   CardBase,
@@ -7,7 +8,6 @@ import {
   Img,
   Cards,
   Arrow,
-  Link,
   SectionHead,
   Scroll
 } from "../styled";
@@ -54,7 +54,7 @@ export default () => {
     <Popular>
       <SectionHead>
         <H1>Popular reservations around the world</H1>
-        <Link href="/popular-all">
+        <Link to="/popular-all" className="link">
           See all <Arrow />
         </Link>
       </SectionHead>

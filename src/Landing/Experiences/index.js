@@ -13,7 +13,7 @@ import {
   Cards,
   Rating,
   Arrow,
-  Link,
+  LinkD,
   Info,
   RatingInfo,
   SectionHead,
@@ -32,6 +32,8 @@ const Card = CardBase.extend.attrs({
 const Span = styled.span`
   font-weight: 300;
 `;
+
+const Link = styled(LinkD)``;
 
 const SecCard = props => (
   <Card>
