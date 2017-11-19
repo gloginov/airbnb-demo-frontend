@@ -19,6 +19,7 @@ export default function() {
   return (
     <Wrapper>
       <ReactMap
+      
         apiKey={process.env.REACT_APP_GOOGLE_API_KEY}
         center={[37.773972, -122.431297]}
         zoom={10}

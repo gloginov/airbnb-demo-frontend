@@ -3,6 +3,11 @@ import styled from "styled-components";
 import Filter from "./Filter";
 import Dates from "./Dates";
 import Guests from "./Guests";
+import MoreFilter from "./MoreFilter";
+import RoomType from "./RoomType";
+import Price from "./Price";
+import Book from "./Book";
+
 
 const Filters = styled.div`
   position: fixed;
@@ -46,11 +51,19 @@ export default function() {
           <Guests />
         </Filter>
         <DesktopFilters>
-          <Filter title="Room Type" />
-          <Filter title="Price" />
-          <Filter title="Instant book" />
+          <Filter title="Room Type">
+            <RoomType />
+          </Filter>
+          <Filter title="Price" >
+            <Price />
+          </Filter>
+          <Filter title="Instant book" >
+            <Book />
+          </Filter>
         </DesktopFilters>
-        <Filter title="More filters" />
+        <Filter title="More filters">
+          <MoreFilter />
+        </Filter>
       </div>
     </Filters>
   );
